@@ -1,0 +1,67 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="./home.component.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+             <img src=".\assets\images\logo.png" alt="Library Logo"> 
+            <h1>Library Management System</h1>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a (click)="navigateToFetchPage()" routerLink="fetch" routerLinkActive="active" class="nav-link">Book Info</a></li>
+
+            <li><a  (click)="navigateToAboutPage()" routerLink ="abtus" routerLinkActive ="active" class="nav-link">About Us</a></li>
+            <li><a  (click)="navigateToContactPage()" routerLink ="contactus" routerLinkActive ="active" class="nav-link">Contact Us</a></li>
+            <li><a  (click)="navigateToGalleryPage()" routerLink ="gallery" routerLinkActive ="active" class="nav-link">Gallery</a></li>
+        </ul>
+    </nav>
+    <br>
+    <div class="scrolling-text">
+        <marquee width="100%" direction="left" height="100px" class="blink">
+           Welcome to LMS!!
+        </marquee>
+    </div>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="./home.component.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src=".\assets\images\logo.png" alt="Library Logo" (click)="navigateToHome()">
+            <h1>Library Management System</h1>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a (click)="navigateToFetchPage()" routerLink="fetch" routerLinkActive="active" class="nav-link">Book Info</a></li>
+            <li><a  (click)="navigateToAboutPage()" routerLink="abtus" routerLinkActive="active" class="nav-link">About Us</a></li>
+            <li><a  (click)="navigateToContactPage()" routerLink="contactus" routerLinkActive="active" class="nav-link">Contact Us</a></li>
+            <li><a  (click)="navigateToGalleryPage()" routerLink="gallery" routerLinkActive="active" class="nav-link">Gallery</a></li>
+        </ul>
+    </nav>
+    <div class="background-image">
+    <br>
+    <!-- <div class="scrolling-text">
+        <marquee width="100%" direction="left" height="100px" class="blink">
+           Welcome to LMS!!
+        </marquee>
+    </div> -->
+</div>
+
+
+</body>
+</html>

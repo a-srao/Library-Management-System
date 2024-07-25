@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./create.component.css">
+    <title>Book Management</title>
+</head>
+<body>
+    <!-- <header>
+        <h1>Book Management System</h1>
+    </header> -->
+    <main>
+        <form #userForm= "ngForm" class="book-form" (ngSubmit)="onSubmit()">
+            <label for="bookName">Book Name:</label>
+            <input type="text" id="bookName" name="bookName" [(ngModel)]="newBook.book_name" placeholder="Book Name"  [required]="true"/>
+
+          
+
+            <label for="author">Author:</label>
+            <input type="text" id="author" name="author"  [(ngModel)]="newBook.book_author" placeholder="Author"   [required]="true"/>
+            
+            <label for="edition">Edition:</label>
+            <input type="text" id="edition" name="edition" [(ngModel)]="newBook.book_edition" placeholder="Edition"  [required]="true"/>
+            
+            <!-- <label>Format:</label>
+            <div class="radio-buttons">
+                <label><input type="radio" name="format" value="paperback">Paperback</label>
+                <label><input type="radio" name="format" value="hardcover">Hardcover</label>
+            </div> -->
+            
+            <div class="buttons">
+                <button [disabled]= "userForm.invalid" type="submit" id="submitButton" >Submit</button>
+                <button type="reset" id="resetButton">Reset</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>

@@ -1,0 +1,312 @@
+<!-- 
+
+<head>
+    <link rel="stylesheet" href="./fetch.component.css">
+</head>
+<body>
+    
+<h1 style="text-align: center;">Table info</h1>
+
+<div class="search-bar">
+    <input type="text" placeholder="Search...">
+</div>
+
+<div class="table-toolbar">
+    <button class="create-button">
+        <a [routerLink]="['/saveBook']" routerLinkActive="active" class="nav-link">Create</a>
+    </button>
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Author</th>
+            <th>Edition</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let book of book">
+            <td>{{ book.book_id }}</td>
+            <td>{{ book.book_name }}</td>
+            <td>{{ book.book_author }}</td>
+            <td>{{ book.book_edition }}</td>
+            <td> 
+                <button class="action-button" (click)="updateBook(book.book_id)">Update</button>
+                <button class="action-button" (click)="deleteBook(book.book_id)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</body> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+   
+    <link rel="stylesheet" href="./fetch.component.css">
+</head>
+<body>
+    
+    <div class="container mt-4">
+        <h1 class="text-center">Table Info</h1>
+
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <div class="search-bar">
+                <input type="text" class="form-control" placeholder="Search...">
+            </div>
+            <div class="table-toolbar">
+                <a [routerLink]="['/saveBook']" routerLinkActive="active" class="btn btn-success">Create</a>
+            </div>
+        </div>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Author</th>
+                    <th>Edition</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let book of book">
+                    <td>{{ book.book_id }}</td>
+                    <td>{{ book.book_name }}</td>
+                    <td>{{ book.book_author }}</td>
+                    <td>{{ book.book_edition }}</td>
+                    <td> 
+                        <button class="btn btn-warning" (click)="updateBook(book.book_id)">Update</button>
+                        <button class="btn btn-danger ml-2" (click)="deleteBook(book.book_id)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./fetch.component.css">
+    <style>
+
+        .btn-small {
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <a [routerLink]="['/saveBook']" routerLinkActive="active" class="btn btn-success btn-small">Create</a>
+            </div>
+            <div class=" text-right">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search..." style="margin-left: 35%;">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary btn-small" type="button">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container mt-4">
+        <h1 class="text-center">Table Info</h1>
+
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Author</th>
+                    <th>Edition</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let book of book">
+                    <td>{{ book.book_id }}</td>
+                    <td>{{ book.book_name }}</td>
+                    <td>{{ book.book_author }}</td>
+                    <td>{{ book.book_edition }}</td>
+                    <td> 
+                        <button class="btn btn-warning" (click)="updateBook(book.book_id)">Update</button>
+                        <button class="btn btn-danger ml-2" (click)="deleteBook(book.book_id)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+ 
+    <link rel="stylesheet" href="./fetch.component.css">
+    <style>
+
+        .btn-small {
+            padding: 5px 10px;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+        }
+        .search-input {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        .search-btn {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+             
+    background-image: url('./assets/images/a.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 0.5); 
+        }
+    </style>
+</head>
+<body>
+  
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <a [routerLink]="['/saveBook']" routerLinkActive="active" class="btn btn-success btn-small">Create</a> 
+            </div>
+            <div class="col-md-6">
+                <div class="search-bar">
+                    <input type="text" class="form-control search-input" placeholder="Search...">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary search-btn" type="button"  >Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+    <div class="container mt-4">
+        <h1 class="text-center">Table Info</h1>
+
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Author</th>
+                    <th>Edition</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let book of book">
+                    <td>{{ book.book_id }}</td>
+                    <td>{{ book.book_name }}</td>
+                    <td>{{ book.book_author }}</td>
+                    <td>{{ book.book_edition }}</td>
+                    <td> 
+                        <button class="btn btn-warning" (click)="updateBook(book.book_id)">Update</button>
+                        <button class="btn btn-danger ml-2" (click)="deleteBook(book.book_id)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./fetch.component.css">
+    <meta name="description" content="Bootstrap.">  
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">   
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://cdn.datatables.net/1.10.2/css/jquery.dataTables.min.css">
+    <script type="text/javascript" src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+</head>
+<body class="b1">
+    <br>
+    <div class="container-fluid">
+        
+        <div class="row">
+            <div class="col-md-6">
+                <a [routerLink]="['/saveBook']" routerLinkActive="active" class="btn btn-success btn-small">Create</a> 
+            </div>
+            <div class="col-md-6">
+                <div class="search-bar">
+                    <input type="text" class="form-control search-input" placeholder="Search..."  [(ngModel)]="searchQuery"  >
+                    <div class="input-group-append">
+                        <button class="btn btn-primary search-btn" type="button" (click)="onSearch()">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-4">
+        <h1 class="text-center">Book List</h1>
+        <table class="table table-striped">
+            <thead style="background-color: rgba(104, 70, 42, 0.688);color: #EEE9E9;">
+                <tr style="text-align: center;">
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Author</th>
+                    <th>Edition</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody >
+                <tr *ngFor="let bookItem of books" style="text-align: center;">
+                    <td>{{ bookItem.book_id }}</td>
+                    <td>{{ bookItem.book_name }}</td>
+                    <td>{{ bookItem.book_author }}</td>
+                    <td>{{ bookItem.book_edition }}</td>
+                    <td> 
+                        <button class="btn btn-warning" (click)="updateBook(bookItem.book_id)">Update</button>
+                        <button class="btn btn-danger ml-2" (click)="deleteBook(bookItem.book_id)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+ 
+</body>
+<div style="background-color: rgb(255, 255, 255); "><br></div>
+<footer >
+    <p>&copy; 2023 Library Management System. All rights reserved.</p>
+</footer>
+<div style="background-color: rgb(255, 255, 255);"><br></div>
+<script>
+    $(document).ready(function(){
+        $('#myTable').dataTable();
+    });
+    </script>
+</html>
+
